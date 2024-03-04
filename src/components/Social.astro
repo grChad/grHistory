@@ -1,0 +1,45 @@
+---
+import GitHubIcon from '@assets/icons/github.svg?raw'
+import YoutubeIcon from '@assets/icons/youtube.svg?raw'
+import TwitterICon from '@assets/icons/twitter.svg?raw'
+
+const githubColor = '#2a404d'
+const youtubeColor = '#fd0100'
+const twitterColor = '#31a5ee'
+---
+
+<div class="social">
+	<a class="github" href="https://github.com/grChad/my-assets" target="_blank">
+		<Fragment set:html={GitHubIcon} />
+	</a>
+	<a class="youtube" href="https://github.com/grChad/my-assets" target="_blank">
+		<Fragment set:html={YoutubeIcon} />
+	</a>
+	<a class="twitter" href="https://github.com/grChad/my-assets" target="_blank">
+		<Fragment set:html={TwitterICon} />
+	</a>
+</div>
+
+<style define:vars={{ githubColor, youtubeColor, twitterColor }}>
+	.social {
+		@apply bg-[#222222] flex justify-center items-center;
+		@media screen and (max-width: 636px) {
+			height: 40px;
+		}
+	}
+	a {
+		@apply text-white/80 h-full px-4 grid place-items-center;
+	}
+	.github:hover,
+	.github:focus {
+		background-color: var(--githubColor);
+	}
+	.youtube:hover,
+	.youtube:focus {
+		background-color: var(--youtubeColor);
+	}
+	.twitter:hover,
+	.twitter:focus {
+		background-color: var(--twitterColor);
+	}
+</style>

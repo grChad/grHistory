@@ -1,0 +1,22 @@
+---
+import Navigation from './Navigation.astro'
+import Social from './Social.astro'
+---
+
+<header>
+	<nav class="nav">
+		<Navigation />
+		<Social />
+	</nav>
+</header>
+
+<style>
+	.nav {
+		display: flex;
+		flex-direction: column-reverse;
+
+		@media screen and (min-width: 636px) {
+			flex-direction: row;
+		}
+	}
+</style>

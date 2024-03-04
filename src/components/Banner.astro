@@ -1,0 +1,25 @@
+---
+
+---
+
+<div class="banner-intro">
+	<h1>grChad</h1>
+</div>
+
+<style>
+	.banner-intro {
+		@apply h-[180px] grid place-content-center select-none;
+		background: linear-gradient(to bottom, #282f79, #85cff9);
+		-webkit-user-select: none;
+	}
+
+	.banner-intro:hover h1 {
+		transform: scale(1.8) translateY(-5px);
+	}
+
+	h1 {
+		@apply text-[80px] leading-[80px] text-white font-bold translate-x-[70px];
+		filter: drop-shadow(0 0 5px #000);
+		transition: transform 300ms;
+	}
+</style>

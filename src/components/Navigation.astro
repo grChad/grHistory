@@ -1,0 +1,22 @@
+---
+import '@styles/global.css'
+---
+
+<div class="w-full flex justify-center items-center bg-[#333333]">
+	<a class="anchor" href="/">Inicio</a>
+	<a class="anchor" href="/about/">Sobre mi</a>
+	<a class="anchor" href="/blog/">Blog</a>
+	<a class="anchor" href="/tags/">Etiquetas</a>
+</div>
+
+<style>
+	.anchor {
+		@apply text-xl text-white/80 py-1 px-4;
+	}
+
+	.anchor:hover,
+	.anchor:focus {
+		color: white;
+		background-color: #282f79;
+	}
+</style>
