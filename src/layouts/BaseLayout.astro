@@ -1,10 +1,10 @@
 ---
 import '@styles/global.css'
-import '@styles/blogs.css'
 
 // NOTE: import components
 import Header from '../components/Header.astro'
 import Banner from '../components/Banner.astro'
+import ThemeIcons from '@components/ThemeIcon.astro'
 // import Footer from '@components/Footer.astro'
 
 const { pageTitle } = Astro.props
@@ -23,6 +23,7 @@ const { pageTitle } = Astro.props
 		<Banner />
 		<cite-note></cite-note>
 		<slot />
+		<ThemeIcons />
 		<!-- <Footer /> -->
 	</body>
 </html>
