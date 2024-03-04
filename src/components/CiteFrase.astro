@@ -1,0 +1,34 @@
+---
+import '@styles/blogs.css'
+
+interface Props {
+	title: string
+	phrase: string
+}
+const { title = 'nota', phrase } = Astro.props
+---
+
+<cite-frase>
+	<cite class="box-frase">
+		<h3 class="title">{title.toUpperCase()}</h3>
+
+		<slot />
+
+		<div class="box-span">
+			<span>{phrase}</span>
+		</div>
+	</cite>
+</cite-frase>
+
+<style>
+	:global(.dark) .box-frase {
+		background-color: #414559;
+		border-color: #666c81;
+	}
+	:global(.dark) .title,
+	:global(.dark) .box-span span {
+		background-color: #292c3c;
+		border-color: #666c81;
+		color: whitesmoke;
+	}
+</style>
