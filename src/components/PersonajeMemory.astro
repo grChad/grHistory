@@ -1,0 +1,30 @@
+---
+interface Props {
+	name: string
+	lifeYear: string
+	srcImg: string
+}
+const { name, lifeYear, srcImg } = Astro.props
+---
+
+<personaje-memory>
+	<cite class="card-memory">
+		<div class="box-description">
+			<slot />
+		</div>
+		<div class="box-image">
+			<img class="image" src={srcImg} alt={name} />
+			<p class="text-caption">
+				<span>{name}</span>
+				<span>{lifeYear}</span>
+			</p>
+		</div>
+	</cite>
+</personaje-memory>
+
+<style>
+	:global(.dark) .card-memory {
+		background-color: var(--surface2);
+		box-shadow: var(--box-shadow-card-dark);
+	}
+</style>

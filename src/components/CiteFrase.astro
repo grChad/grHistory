@@ -8,8 +8,8 @@ interface Props {
 const { title = 'nota', phrase } = Astro.props
 ---
 
-<cite-frase>
-	<cite class="box-frase">
+<cite-phrase>
+	<cite class="cite-phrase">
 		<h3 class="title">{title.toUpperCase()}</h3>
 
 		<slot />
@@ -18,17 +18,17 @@ const { title = 'nota', phrase } = Astro.props
 			<span>{phrase}</span>
 		</div>
 	</cite>
-</cite-frase>
+</cite-phrase>
 
 <style>
-	:global(.dark) .box-frase {
-		background-color: #414559;
-		border-color: #666c81;
+	:global(.dark) .cite-phrase {
+		background-color: var(--surface1);
 	}
+
 	:global(.dark) .title,
 	:global(.dark) .box-span span {
-		background-color: #292c3c;
-		border-color: #666c81;
-		color: whitesmoke;
+		background-color: var(--mantle);
+		border-color: var(--surface1);
+		color: var(--whitesmoke);
 	}
 </style>
